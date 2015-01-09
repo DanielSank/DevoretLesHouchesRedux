@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amstext}
+
+\title{Errata and suggested edits for \\
+Quantum Fluctuations in Electrical Circuits}
+
+\author{Daniel Sank}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\begin{itemize}
+
+\item Page 356: the formula for the quality factor of the damped resonator should be
+\begin{equation}
+Q = \frac{1}{\Re{Y(\omega_0)} Z_0} \nonumber \, .
+\end{equation} 
+The real part is omitted in the text.
+
+\item Page 357: In the caption of Fig. 2, the phrase "effective inductance of the junction" might be changed to "small-current inductance of the junction".
+
+\item Page 358: The term "effective inductance" for the junction is introduced. It would be nice to move this prior to references to Fig. 2.
+
+\end{itemize}
+
+
+\section{Hamiltonian description of the classical dynamics of electrical circuits}
+
+\begin{itemize}
+
+\item Page 361: I think "An Hamiltonian" should be "A Hamiltonian".
+
+\item Page 363: There are many occurrences of the expression $2e / \hbar$ throughout the course. I wonder if using $\Phi_0 \equiv h / 2e$ would be easier to read.
+
+\item Page 363: It would be convenient to label $C_1$, $C_2$, etc. in Figure 5.
+
+\item Page 364: I think equations (2.14) and (2.15) should be
+\begin{align}
+C_1 \ddot{\phi}_a + C_3 ( \ddot{\phi}_a - \ddot{\phi}_b) &= - \frac{\phi_a}{L_1} - \frac{\phi_a - \phi_b + \tilde{\Phi}}{L_3} \nonumber \\
+C_2 \ddot{\phi}_b + C_3 ( \ddot{\phi}_b - \ddot{\phi}_a) &= - \frac{\phi_b}{L_2} - \frac{\phi_b - \phi_a - \tilde{\Phi}}{L_3} \nonumber \, .
+\end{align}
+Note that the Lagrangian (2.16) is correct, but does not match (2.14) and (2.15).
+
+\end{itemize}
+
+\end{document}
