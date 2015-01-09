@@ -4,6 +4,9 @@
 \usepackage{amsmath}
 \usepackage{amstext}
 
+\newcommand{\ket}[1]{|#1 \rangle}
+\newcommand{\bbraket}[3]{\langle #1 | #2 | #3 \rangle}
+
 \title{Errata and suggested edits for \\
 Quantum Fluctuations in Electrical Circuits}
 
@@ -56,6 +59,41 @@ H = \frac{1}{C_1 C_2 + C_1 C_3 + C_2 C_3} & \left[
 + & \left[
 \frac{\phi_a^2}{2 L_1} + \frac{\phi_b^2}{2 L_2} + \frac{(\phi_a - \phi_b + \tilde{\Phi})^2}{2 L_3} \right] \nonumber \, .
 \end{align}
+There is an easy way to see this.
+The kinetic part of the Lagrangian can be written
+\begin{equation*}
+\mathcal{L}_{T} = \frac{1}{2} \dot{\Phi}^\top M \dot{\Phi}
+\end{equation*}
+where $M$ is represented as
+\begin{equation*}
+M = \left[ \begin{array} {cc} C_1 + C_3 & -C_3 \\ -C_3 & C_2 + C_3 \end{array} \right]
+\end{equation*}
+and
+\begin{equation*}
+\dot{\Phi} = \left( \begin{array}{c} \dot{\phi_a} \\ \dot{\phi}_b \end{array} \right)
+\end{equation*}
+Writing out the the canonical momenta $q_a$ and $q_b$ we find
+\begin{equation*}
+Q = M \dot{\Phi}
+\end{equation*}
+where here
+\begin{equation*}
+Q = \left( \begin{array}{c} q_a \\ q_b \end{array} \right) \, .
+\end{equation*}
+Therefore,
+\begin{equation*}
+\mathcal{L}_T = \frac{1}{2} Q^\top M^{-1} Q
+\end{equation*}
+and so the kinetic part of the Hamiltonian is
+\begin{equation}
+H = Q^\top \dot{\Phi} - \mathcal{L}_T = \frac{1}{2} Q^\top M^{-1} Q \label{eq:Hamiltonian} \, .
+\end{equation}
+The inverse matrix is
+\begin{equation*}
+M^{-1} = \frac{1}{C_1 C_2 + C_1 C_3 + C_2 C_3}
+\left[ \begin{array}{cc} C_2 + C_3  & C_3 \\ C_3 & C_1 + C_2 \end{array} \right] \, .
+\end{equation*}
+Expanding Eq.\,(\ref{eq:Hamiltonian}) with this matrix gives the result I propose.
 
 \item Page 365: In equation (2.18) it may be very helpful to point out that the expression
 \begin{equation}
